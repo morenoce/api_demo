@@ -1,9 +1,8 @@
 import pytest
-from pathlib import Path
+from config import DATA_DIR
 from client.api_helper import ApiHelper
 
-ROOT_DIR = Path(__file__).parent.resolve()
-TEST_FILE = ROOT_DIR / 'test_data.csv'
+TEST_FILE = DATA_DIR / 'test_data.csv'
 with open(TEST_FILE, 'r') as f:
     scenarios = [line.split() for line in f.readlines()]
 
